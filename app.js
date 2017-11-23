@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   host     : process.env.MMSQL_HOST || 'localhost',
   user     : process.env.MMSQL_USER || 'root',
   password : process.env.MMSQL_PASSWD || 'root',
-  database : process.env.MMSQL_DB || 'test'
+  database : process.env.MMSQL_DB || 'mysql'
 });
 connection.connect();
 connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
